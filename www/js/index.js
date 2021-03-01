@@ -57,7 +57,7 @@ navigator.geolocation.getCurrentPosition(onSuccess, onError);
 
 function showCountry(lat, lon) {
   alert("sohw");
-  $.getJSON('http://nominatim.openstreetmap.org/reverse?json_callback=?&format=json', {lat: lat, lon: lon}, function(data) {
+  $.getJSON('http://nominatim.openstreetmap.org/reverse?format=json', {lat: lat, lon: lon}, function(data) {
     if(data.address.city!=undefined){
       city=data.address.city;
     }
